@@ -25,4 +25,4 @@ Route::prefix('register')->name('register.')->group(function (){
     Route::post('/{provider}', 'Auth\RegisterController@registerProviderUser')->name('{provider}');
 });
 Route::get('/', 'ArticleController@index')->name('articles.index');
-Route::resource('/articles', 'ArticleController')->except(['index']);
+Route::resource('/articles', 'ArticleController')->except(['index'])->middleware('auth');
