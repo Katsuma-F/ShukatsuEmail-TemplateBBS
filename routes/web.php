@@ -11,10 +11,6 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Auth::routes();
 Route::prefix('login')->name('login.')->group(function () {
     Route::get('/{provider}', 'Auth\LoginController@redirectToProvider')->name('{provider}');
