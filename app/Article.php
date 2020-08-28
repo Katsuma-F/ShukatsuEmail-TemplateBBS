@@ -22,4 +22,11 @@ class Article extends Model
     {
         return $this->belongsToMany('App\User', 'favorites')->withTimestamps();
     }
+
+    public function isFavoritedBy(?User $user): bool
+    {
+        return $user
+            ? (bool)$this->favorites->where('id', $user->id)->count()
+            : false;
+    }
 }
