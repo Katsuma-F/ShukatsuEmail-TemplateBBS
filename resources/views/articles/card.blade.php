@@ -10,6 +10,14 @@
             {!! nl2br(e($article->body)) !!}
         </div>
     </div>
+
+    <div class="card-body d-flex justify-content-end pt-0 pb-0 pr-4">
+        <div class="card-text">
+            <article-like>
+            </article-like>
+        </div>
+    </div>
+
     <div class="card-body d-flex flex-row">
         <i class="fas fa-user-circle fa-3x mr-1"></i>
         <div>
