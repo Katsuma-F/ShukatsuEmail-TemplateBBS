@@ -13,7 +13,9 @@
 
     <div class="card-body d-flex justify-content-end pt-0 pb-0 pr-4">
         <div class="card-text">
-            <article-like>
+            <article-like
+                :initial-is-favorited-by='@json($article->isFavoritedBy(Auth::user()))'
+            >
             </article-like>
         </div>
     </div>
