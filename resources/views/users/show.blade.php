@@ -18,13 +18,21 @@
                     </a>
                 </h2>
             </div>
-            <div class="card-body">
-                <div class="card-text">
-                <a href="" class="text-muted">
-                    投稿記事数: 10
-                </a>
-                </div>
-            </div>
         </div>
+        <ul class="nav nav-tabs nav-justified mt-3">
+            <li class="nav-item">
+                <a class="nav-link text-muted active" href="{{ route('users.show', ['name' => $user->name]) }}">
+                    記事
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-muted" href="">
+                    お気に入り
+                </a>
+            </li>
+        </ul>
+        @foreach($articles as $article)
+            @include('articles.card')
+        @endforeach
     </div>
 @endsection
