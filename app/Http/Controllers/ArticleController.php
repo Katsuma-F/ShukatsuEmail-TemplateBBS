@@ -54,4 +54,23 @@ class ArticleController extends Controller
     {
         return view('articles.show', ['article' => $article]);
     }
+
+    public function favorite(Request $request, Article $article)
+    {
+        $article->favorites()->detach($request->user()->id);
+        $article->favorites()->attach($request->user()->id);
+
+        return [
+            'id' => $article->id,
+        ];
+    }
+
+    public function unfavorite(Request $request, Article $article)
+    {
+        $article->favorites()->detach($request->user()->id);
+
+        return [
+            'id' => $article->id,
+        ];
+    }
 }

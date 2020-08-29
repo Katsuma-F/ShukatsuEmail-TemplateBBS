@@ -15,6 +15,8 @@
         <div class="card-text">
             <article-like
                 :initial-is-favorited-by='@json($article->isFavoritedBy(Auth::user()))'
+                :authorized='@json(Auth::check())'
+                endpoint="{{ route('articles.favorite', ['article' => $article]) }}"
             >
             </article-like>
         </div>
