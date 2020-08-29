@@ -17,4 +17,16 @@ class UserController extends Controller
             'articles' => $articles,
         ]);
     }
+
+    public function favorites(string $name)
+    {
+        $user = User::where('name', $name)->first();
+
+        $articles = $user->favorites->sortByDesc('created_at');
+
+        return view('users.favorites', [
+            'user' => $user,
+            'articles' => $articles,
+        ]);
+    }
 }

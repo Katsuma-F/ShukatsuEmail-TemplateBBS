@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -41,6 +42,11 @@ class User extends Authenticatable
     public function articles(): HasMany
     {
         return $this->hasMany('App\Article');
+    }
+
+    public function favorites(): BelongsToMany
+    {
+        return $this->belongsToMany('App\Article', 'favorites')->withTimestamps();
     }
 
 }
