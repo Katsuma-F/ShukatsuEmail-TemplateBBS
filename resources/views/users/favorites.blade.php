@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', $user->name . 'のお気に入り登録したメール')
+@section('title', $user->name . 'のお気に入り登録したメールテンプレ')
 
 @section('content')
     @include('nav')
