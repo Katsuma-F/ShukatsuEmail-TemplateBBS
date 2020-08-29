@@ -22,12 +22,12 @@
         <ul class="nav nav-tabs nav-justified mt-3">
             <li class="nav-item">
                 <a class="nav-link text-muted active" href="{{ route('users.show', ['name' => $user->name]) }}">
-                    記事
+                    テンプレ
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-muted" href="">
-                    お気に入り
+                    お気に入りテンプレ
                 </a>
             </li>
         </ul>
