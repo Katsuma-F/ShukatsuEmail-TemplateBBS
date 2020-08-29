@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'テンプレ更新')
+@section('title', 'メール更新')
 
 @include('nav')
 

@@ -16,7 +16,7 @@
         @endguest
         @auth
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('articles.create') }}"><i class="far fa-edit mr-1"></i>テンプレを投稿する</a>
+                <a class="nav-link" href="{{ route('articles.create') }}"><i class="far fa-edit mr-1"></i>メールを投稿する</a>
             </li>
         @endauth
         @auth
