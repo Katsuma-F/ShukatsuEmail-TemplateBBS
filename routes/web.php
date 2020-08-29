@@ -27,3 +27,6 @@ Route::prefix('articles')->name('articles.')->group(function () {
     Route::put('/{article}/favorite', 'ArticleController@favorite')->name('favorite')->middleware('auth');
     Route::delete('/{article}/favorite', 'ArticleController@unfavorite')->name('unfavorite')->middleware('auth');
 });
+Route::prefix('users')->name('users.')->group(function () {
+    Route::get('/{name}', 'UserController@show')->name('show');
+});
