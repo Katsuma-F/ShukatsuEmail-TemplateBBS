@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function show(string $name)
     {
-        $user = User::where('name', $name)->first();
+        $user = User::where('name', $name)->first()->load(['articles.user', 'articles.favorites']);
         $articles = $user->articles->sortByDesc('created_at');
 
         return view('users.show', [
@@ -20,7 +20,7 @@ class UserController extends Controller
 
     public function favorites(string $name)
     {
-        $user = User::where('name', $name)->first();
+        $user = User::where('name', $name)->first()->load(['favorites.user', 'favorites.favorites']);
 
         $articles = $user->favorites->sortByDesc('created_at');
 
