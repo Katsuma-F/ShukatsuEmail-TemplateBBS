@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand navbar-dark indigo">
     <a class="navbar-brand" href="/">
-        <img src="{{ asset('image/sozai_cman_jp_20200823205504.png') }}" alt="メインロゴ" style="width: 10%;">
-        就活メール・テンプレ掲示板
+        <div class="app-name" style="font-size: 10%;">就活メール・<br>テンプレ掲示板</div>
     </a>
     <ul class="navbar-nav ml-auto">
         @guest
@@ -16,7 +15,7 @@
         @endguest
         @auth
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('articles.create') }}"><i class="far fa-edit mr-1"></i>メールテンプレを投稿する</a>
+                <a class="nav-link" href="{{ route('articles.create') }}"><i class="far fa-edit mr-1"></i>メールテンプレを投稿</a>
             </li>
         @endauth
         @auth
