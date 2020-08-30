@@ -1,7 +1,8 @@
 ![ロゴ](https://raw.githubusercontent.com/Katsuma-F/ShukatsuEmail-TemplateBBS/images/facebook_cover_photo_1.png)
 
 # ShukatsuEmail-TemplateBBS
-企業と連絡を取るためのメール文作成を楽にすることが目的の就活生向け掲示板Webアプリケーション。
+企業と連絡を取るためのメール文作成を楽にすることが目的の
+就活生向け掲示板Webアプリケーション。
 
 ## 主な機能
 1. 投稿記事の一覧
@@ -20,7 +21,6 @@
 * PostgreSQL
 * JavaScript
 * HTML
-* CSS
 
 ### 使用FW/ライブラリ・ツール
 * Laravel
